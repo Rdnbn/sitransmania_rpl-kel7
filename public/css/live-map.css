@@ -1,0 +1,84 @@
+/* =============================
+   PALETTE WARNA (DARI USER)
+   ============================= */
+:root {
+    --coklat-tua: #4a3022;
+    --coklat: #7c543a;
+    --coklat-muda: #bfa891;
+    --krem: #e6d4c3;
+    --putih: #ffffff;
+}
+
+/* =============================
+   KONTAINER HALAMAN LIVE MAP
+   ============================= */
+.live-map-container {
+    width: 100%;
+    height: calc(100vh - 80px); /* sisa setelah navbar */
+    display: flex;
+    flex-direction: column;
+    background-color: var(--krem);
+    padding: 0;
+    margin: 0;
+}
+
+/* =============================
+   TITLE / JUDUL
+   ============================= */
+.live-map-title {
+    background-color: var(--coklat-tua);
+    color: var(--putih);
+    padding: 16px 24px;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* =============================
+   MAP WRAPPER
+   ============================= */
+#map {
+    width: 100%;
+    flex: 1; /* biar map memenuhi sisa layar */
+    border-top: 4px solid var(--coklat);
+}
+
+/* =============================
+   CARD INFO (OPTIONAL)
+   ============================= */
+.map-info-card {
+    position: absolute;
+    top: 110px;
+    right: 20px;
+    background: var(--putih);
+    padding: 16px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-left: 5px solid var(--coklat);
+}
+
+.map-info-card h4 {
+    margin: 0;
+    color: var(--coklat-tua);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.map-info-card p {
+    margin: 5px 0 0;
+    color: var(--coklat);
+    font-size: 14px;
+}
+
+/* =============================
+   RESPONSIVE
+   ============================= */
+@media (max-width: 768px) {
+    .map-info-card {
+        top: auto;
+        bottom: 20px;
+        width: 90%;
+        right: 50%;
+        transform: translateX(50%);
+    }
+}

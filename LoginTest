@@ -1,0 +1,5 @@
+🔐 Login testing: Role Email Password Admin admin@gmail.com admin123 Pemilik
+budi@gmail.com pemilik123 Pemilik siti@gmail.com pemilik123 Pemilik
+rizal@gmail.com pemilik123 Peminjam dewi@gmail.com peminjam123 Peminjam
+rama@gmail.com peminjam123 Peminjam andi@gmail.com peminjam123
+register.blade.php: <a href="{{ route('password.request') }}">Lupa password?</a>
