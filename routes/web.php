@@ -9,9 +9,9 @@ use App\Http\Controllers\WargaController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
-use App\Http\Controllers\Pemilik\DashboardController;
-use App\Http\Controllers\Peminjam\DashboardController as PeminjamDashboardController;
-use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\Pemilik\DashboardPemilikController;
+use App\Http\Controllers\Peminjam\DashboardPeminjamController;
+use App\Http\Controllers\Admin\DashboardAdminController;
 
 // HALAMAN UTAMA
 Route::get('/', function () {
@@ -36,9 +36,9 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 // UNIVERSAL CHAT (boleh semua role)
 Route::middleware(['auth'])->group(function () {
 
-    Route::get('/pemilik/dashboard', [DashboardController::class, 'index'])->name('pemilik.dashboard');
-    Route::get('/peminjam/dashboard', [PeminjamDashboardController::class, 'index'])->name('peminjam.dashboard');
-    Route::get('/admin/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
+    Route::get('/pemilik/dashboard', [DashboardPemilikController::class, 'index'])->name('pemilik.dashboard');
+    Route::get('/peminjam/dashboard', [DashboardPeminjamController::class, 'index'])->name('peminjam.dashboard');
+    Route::get('/admin/dashboard', [DashboardAdminController::class, 'index'])->name('admin.dashboard');
 
     // ROOM CHAT
     Route::get('/chat/{id_peminjaman}', [ChatController::class, 'room'])
