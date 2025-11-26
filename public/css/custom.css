@@ -1,0 +1,81 @@
+:root {
+    --color-dark-coffee: #3e2723;
+    --color-brown: #6d4c41;
+    --color-soft-brown: #a1887f;
+    --color-krem: #d7ccc8;
+    --color-off-white: #ffffff;
+}
+
+/* Body */
+body {
+    background: linear-gradient(
+        135deg,
+        var(--color-dark-coffee),
+        var(--color-brown),
+        var(--color-krem)
+    );
+    color: var(--color-dark-coffee);
+    font-family: "Poppins", sans-serif;
+}
+
+/* Card / Auth forms */
+.auth-card {
+    background-color: rgba(215, 204, 200, 0.9); /* krem semi-transparent */
+    backdrop-filter: blur(10px);
+    border-radius: 18px;
+    padding: 35px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Auth title/subtitle */
+.auth-title {
+    color: var(--color-dark-coffee);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.auth-subtitle {
+    color: var(--color-brown);
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* Input */
+.form-control,
+.auth-input {
+    background-color: var(--color-soft-brown);
+    border: none;
+    border-radius: 12px;
+    padding: 10px 14px;
+    color: var(--color-dark-coffee);
+}
+.form-control:focus {
+    background-color: var(--color-krem);
+    box-shadow: 0 0 10px var(--color-brown);
+    color: var(--color-dark-coffee);
+    border: none;
+}
+
+/* Buttons */
+.btn-primary,
+.auth-btn {
+    background-color: var(--color-brown);
+    color: var(--color-off-white);
+    border-radius: 12px;
+    font-weight: 600;
+}
+.btn-primary:hover,
+.auth-btn:hover {
+    background-color: var(--color-dark-coffee);
+    color: var(--color-krem);
+}
+
+/* Navbar links */
+.navbar .nav-link {
+    color: var(--color-krem) !important;
+}
+.navbar .nav-link:hover {
+    color: var(--color-soft-brown) !important;
+}
+.navbar-brand {
+    color: var(--color-krem) !important;
+}
