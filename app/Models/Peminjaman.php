@@ -20,15 +20,13 @@ class Peminjaman extends Model
         'total_biaya'
     ];
 
-    public function peminjam()
-    {
-        return $this->belongsTo(User::class, 'id_peminjam');
-    }
+  public function peminjam() {
+    return $this->belongsTo(User::class, 'id_peminjam');
+}
 
-    public function pemilik()
-    {
-        return $this->belongsTo(User::class, 'id_pemilik');
-    }
+public function pemilik() {
+    return $this->belongsTo(User::class, 'id_pemilik');
+}
 
     public function kendaraan()
     {

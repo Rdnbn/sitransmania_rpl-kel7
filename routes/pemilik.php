@@ -10,11 +10,6 @@ use App\Http\Controllers\Pemilik\PembayaranPemilikController;
 use App\Http\Controllers\Pemilik\PeminjamanManageController;
 use App\Http\Controllers\RiwayatController;
 
-Route::middleware(['auth','role:pemilik'])
-    ->prefix('pemilik')
-    ->name('pemilik.')
-    ->group(function () {
-
         // DASHBOARD
         Route::get('/dashboard', [DashboardPemilikController::class, 'index'])
             ->name('pemilik.dashboard');
@@ -63,4 +58,3 @@ Route::middleware(['auth','role:pemilik'])
         // RIWAYAT
         Route::get('/riwayat', [RiwayatController::class, 'pemilik'])
             ->name('riwayat');
-    });

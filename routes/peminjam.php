@@ -7,11 +7,6 @@ use App\Http\Controllers\Peminjam\PembayaranController;
 use App\Http\Controllers\Peminjam\ChatPeminjamController;
 use App\Http\Controllers\RiwayatController;
 
-Route::middleware(['auth', 'role:peminjam'])
-    ->prefix('peminjam')
-    ->name('peminjam.')
-    ->group(function () {
-
         // DASHBOARD
         Route::get('/dashboard', function () {
             return view('peminjam.dashboard');
@@ -52,4 +47,3 @@ Route::middleware(['auth', 'role:peminjam'])
         // RIWAYAT
         Route::get('/riwayat', [RiwayatController::class, 'peminjam'])
             ->name('riwayat');
-    });

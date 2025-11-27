@@ -1,81 +1,213 @@
+/* =========================================================
+   SITRANSMANIA CUSTOM THEME (COFFEE BROWN)
+   ========================================================= */
+
+/* -------------------------
+   COLOR VARIABLES
+---------------------------*/
 :root {
-    --color-dark-coffee: #3e2723;
-    --color-brown: #6d4c41;
-    --color-soft-brown: #a1887f;
-    --color-krem: #d7ccc8;
-    --color-off-white: #ffffff;
+    --coffee-dark: #5e4632;
+    --coffee-brown: #7b5a41;
+    --coffee-light: #e7d6c5;
+    --cream: #f5ece4;
+    --text-dark: #2d1f14;
+    --text-light: #ffffff;
 }
 
-/* Body */
+/* -------------------------
+   GLOBAL
+---------------------------*/
 body {
-    background: linear-gradient(
-        135deg,
-        var(--color-dark-coffee),
-        var(--color-brown),
-        var(--color-krem)
-    );
-    color: var(--color-dark-coffee);
     font-family: "Poppins", sans-serif;
+    color: var(--text-dark);
+    background-color: #fafafa;
 }
 
-/* Card / Auth forms */
-.auth-card {
-    background-color: rgba(215, 204, 200, 0.9); /* krem semi-transparent */
-    backdrop-filter: blur(10px);
-    border-radius: 18px;
-    padding: 35px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+a {
+    text-decoration: none;
+    transition: 0.2s ease;
 }
 
-/* Auth title/subtitle */
-.auth-title {
-    color: var(--color-dark-coffee);
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-.auth-subtitle {
-    color: var(--color-brown);
-    font-size: 14px;
-    margin-bottom: 25px;
+a:hover {
+    opacity: 0.8;
 }
 
-/* Input */
-.form-control,
-.auth-input {
-    background-color: var(--color-soft-brown);
-    border: none;
-    border-radius: 12px;
+/* -------------------------
+   BUTTONS
+---------------------------*/
+.btn-coffee {
+    background: var(--coffee-dark);
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 10px 18px;
+    transition: 0.2s;
+}
+
+.btn-coffee:hover {
+    background: var(--coffee-brown);
+    color: #fff;
+}
+
+.btn-outline-coffee {
+    border: 2px solid var(--coffee-dark);
+    color: var(--coffee-dark);
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 10px 18px;
+}
+
+.btn-outline-coffee:hover {
+    background: var(--coffee-dark);
+    color: white;
+}
+
+/* -------------------------
+   FORM INPUTS
+---------------------------*/
+.form-control {
+    border-radius: 10px;
+    border: 1.5px solid #d2c5b9;
     padding: 10px 14px;
-    color: var(--color-dark-coffee);
-}
-.form-control:focus {
-    background-color: var(--color-krem);
-    box-shadow: 0 0 10px var(--color-brown);
-    color: var(--color-dark-coffee);
-    border: none;
 }
 
-/* Buttons */
-.btn-primary,
-.auth-btn {
-    background-color: var(--color-brown);
-    color: var(--color-off-white);
-    border-radius: 12px;
+.form-control:focus {
+    border-color: var(--coffee-dark);
+    box-shadow: 0 0 0 0.15rem rgb(94 70 50 / 25%);
+}
+
+/* -------------------------
+   HEADINGS
+---------------------------*/
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+/* -------------------------
+   CARD DESIGN
+---------------------------*/
+.card-coffee {
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.09);
+    border: none;
+    padding: 20px 22px;
+}
+
+.card-coffee:hover {
+    transform: translateY(-3px);
+    transition: 0.2s ease-in-out;
+}
+
+/* -------------------------
+   NAVBAR (APP & MAIN)
+---------------------------*/
+.navbar-coffee,
+.navbar-app {
+    background: var(--coffee-dark) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-coffee .nav-link,
+.navbar-app .nav-link {
+    color: var(--cream) !important;
+    font-weight: 600;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.navbar-coffee .nav-link:hover,
+.navbar-app .nav-link:hover {
+    color: var(--coffee-light) !important;
+}
+
+.navbar-app .nav-link.active {
+    color: var(--coffee-light) !important;
+    border-bottom: 3px solid var(--coffee-light);
+}
+
+/* Navbar brand */
+.navbar-brand {
+    font-weight: 700;
+    color: var(--cream) !important;
+}
+
+/* -------------------------
+   HERO SECTION (Main Layout)
+---------------------------*/
+.hero-title {
+    color: white;
+    font-size: 44px;
+    font-weight: 800;
+}
+
+.hero-subtitle {
+    color: #f3e9dd;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* -------------------------
+   AUTH PAGES (Login/Register)
+---------------------------*/
+.auth-title {
+    font-weight: 800;
+    color: var(--coffee-dark);
+}
+
+.auth-subtitle {
+    color: var(--coffee-brown);
+}
+
+.auth-card .form-label {
     font-weight: 600;
 }
-.btn-primary:hover,
-.auth-btn:hover {
-    background-color: var(--color-dark-coffee);
-    color: var(--color-krem);
+
+/* -------------------------
+   TABLE STYLE
+---------------------------*/
+.table-coffee thead {
+    background: var(--coffee-dark);
+    color: white;
 }
 
-/* Navbar links */
-.navbar .nav-link {
-    color: var(--color-krem) !important;
+.table-coffee tbody tr:hover {
+    background: #f3e9dd;
+    transition: 0.2s ease;
 }
-.navbar .nav-link:hover {
-    color: var(--color-soft-brown) !important;
+
+/* -------------------------
+   BADGES / STATUS
+---------------------------*/
+.badge-coffee {
+    background: var(--coffee-dark);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
 }
-.navbar-brand {
-    color: var(--color-krem) !important;
+
+.badge-soft-coffee {
+    background: var(--coffee-light);
+    color: var(--coffee-dark);
+}
+
+/* -------------------------
+   FOOTER
+---------------------------*/
+.footer-coffee {
+    background: var(--coffee-dark);
+    color: white;
+    padding: 25px 0;
+    margin-top: 50px;
+}
+
+.footer-coffee a {
+    color: var(--coffee-light);
+    font-weight: 600;
 }

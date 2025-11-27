@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.guest')
 
 @section('title', 'Login')
 
@@ -9,7 +9,9 @@
 
     {{-- Error --}}
     @if($errors->any())
-        <div class="alert alert-danger">{{ $errors->first() }}</div>
+        <div class="alert alert-danger text-center">
+            {{ $errors->first() }}
+        </div>
     @endif
 
     <form action="{{ route('login.store') }}" method="POST">
@@ -17,28 +19,37 @@
 
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" 
-                   name="email" 
-                   id="email"
-                   class="form-control auth-input" 
-                   value="{{ old('email') }}" 
-                   required autofocus>
+            <input 
+                type="email" 
+                name="email" 
+                id="email"
+                class="form-control auth-input"
+                value="{{ old('email') }}"
+                required 
+                autofocus
+            >
         </div>
 
         <div class="mb-4">
             <label for="password" class="form-label">Password</label>
-            <input type="password" 
-                   name="password" 
-                   id="password"
-                   class="form-control auth-input" 
-                   required>
+            <input 
+                type="password" 
+                name="password" 
+                id="password"
+                class="form-control auth-input"
+                required
+            >
         </div>
 
-        <button type="submit" class="btn btn-primary w-100 auth-btn">Login</button>
+        <button type="submit" class="btn btn-primary w-100 auth-btn">
+            Login
+        </button>
     </form>
 
     <div class="text-center mt-3">
-        <a class="auth-link" href="{{ route('showRegisterForm') }}">Belum punya akun? Daftar</a>
+        <a href="{{ route('showRegisterForm') }}" class="auth-link">
+            Belum punya akun? Daftar
+        </a>
     </div>
 </div>
 @endsection
