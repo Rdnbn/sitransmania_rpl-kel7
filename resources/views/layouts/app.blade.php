@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
 
     <style>
+        /* Navbar coklat susu */
         .navbar-app {
-            background: #5E4632;
+            background: linear-gradient(135deg, #F0D8BA 0%, #A67C52 100%);
         }
         .navbar-app .nav-link,
         .navbar-app .navbar-brand {
@@ -18,7 +19,12 @@
             font-weight: 600;
         }
         .navbar-app .nav-link.active {
-            color: #F0D8BA !important;
+            color: #fff5e6 !important;
+        }
+
+        /* Body background optional */
+        body {
+            background-color: #fff8f0;
         }
     </style>
 </head>
@@ -47,7 +53,7 @@
     </nav>
 
     {{-- Main Content --}}
-    <div class="container" style="margin-top: 90px;">
+    <div class="container-fluid" style="margin-top: 90px;">
         @yield('content')
     </div>
 

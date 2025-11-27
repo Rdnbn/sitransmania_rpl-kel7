@@ -18,7 +18,7 @@
             font-weight: 600;
         }
         .hero {
-            background: url('{{ asset("images/bg-asrama.jpg") }}') center/cover no-repeat;
+            background: url('{{ asset("images/Asrama.jpg") }}') center/cover no-repeat;
             height: 85vh;
             position: relative;
             display: flex;
