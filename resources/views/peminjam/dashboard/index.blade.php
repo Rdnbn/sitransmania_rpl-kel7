@@ -92,7 +92,7 @@
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    <a href="{{ route('riwayat.peminjam.index') }}" class="dashboard-card" style="background: linear-gradient(135deg, rgba(108, 78, 63, 0.05) 0%, rgba(201, 165, 140, 0.05) 100%); border: 2px solid #E7D6C8; border-radius: 15px; padding: 2rem; text-align: center; cursor: pointer;">
+                    <a href="{{ route('peminjam.riwayat') }}" class="dashboard-card" style="background: linear-gradient(135deg, rgba(108, 78, 63, 0.05) 0%, rgba(201, 165, 140, 0.05) 100%); border: 2px solid #E7D6C8; border-radius: 15px; padding: 2rem; text-align: center; cursor: pointer;">
                         <i class="bi bi-clock-history" style="font-size: 3rem; color: #6C4E3F;"></i>
                         <h3 style="color: #3d2817; margin: 0;">Riwayat</h3>
                         <p style="color: #8B6354; font-size: 0.85rem;">Lihat riwayat aktivitas Anda</p>
@@ -124,9 +124,6 @@
                     </a>
                 </div>
                 <div class="col-6 col-md-3">
-                <a href="{{ route('chat.index') }}">
-                    <i class="bi bi-chat-dots"></i> Chat
-                </a>
                 </div>
                 <div class="col-6 col-md-3">
                     <a href="{{ route('support') }}" class="quick-action-btn" style="background: #E7D6C8; color: #3d2817; padding: 0.75rem 1rem; border-radius: 10px; display: block; text-align: center; font-weight: 600;">

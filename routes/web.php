@@ -25,6 +25,7 @@ use App\Http\Controllers\Pemilik\PeminjamanManageController;
 use App\Http\Controllers\Peminjam\KendaraanBrowseController;
 use App\Http\Controllers\Peminjam\PeminjamanController;
 use App\Http\Controllers\Peminjam\PembayaranController;
+use App\Http\Controllers\Peminjam\RiwayatPeminjamController;
 use App\Http\Controllers\RiwayatController;
 
 // HALAMAN UTAMA
@@ -116,6 +117,7 @@ Route::middleware(['auth', 'role:pemilik'])->prefix('pemilik')->as('pemilik.')->
 
 // ========== PEMINJAM ROUTES ==========
 Route::middleware(['auth', 'role:peminjam'])->prefix('peminjam')->as('peminjam.')->group(function () {
+
     // DASHBOARD
     Route::get('dashboard', [DashboardPeminjamController::class, 'index'])->name('dashboard');
 
@@ -135,11 +137,6 @@ Route::middleware(['auth', 'role:peminjam'])->prefix('peminjam')->as('peminjam.'
     Route::post('pembayaran/upload', [PembayaranController::class, 'upload'])->name('pembayaran.upload');
 
     // RIWAYAT
-    // Dashboard Peminjam
-    Route::get('/peminjam/dashboard', [DashboardPeminjamController::class, 'index'])
-        ->name('peminjam.dashboard');
-
-    // Riwayat Peminjam
-    Route::get('/peminjam/riwayat', [RiwayatPeminjamController::class, 'index'])
-        ->name('riwayat.peminjam.index');
+    Route::get('riwayat', [RiwayatPeminjamController::class, 'index'])->name('riwayat');
+    Route::get('notifikasi', [NotifikasiController::class, 'index'])->name('notifikasi.index');
 });
